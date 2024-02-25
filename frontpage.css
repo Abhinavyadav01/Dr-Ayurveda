@@ -1,0 +1,434 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.card1,.card2,.card3{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.card1{
+    background-color: #c2f27e;
+}
+.card2{
+    background-color: pink;
+}
+.card3
+{
+  background-color: #c2f27e;
+  position:relative;
+}
+
+.yogifotu{
+    width: 30%;
+    height:40%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    mix-blend-mode: color-burn;
+}
+
+
+.wrapper{
+    display: flex;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+  }
+  .wrapper .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+  }
+  .wrapper .dynamic-txts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+  }
+  .dynamic-txts li{
+    list-style: none;
+    color: #FC6D6D;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 9s steps(3) infinite;
+  }
+  @keyframes slide {
+    100%{
+      top: -270px;
+    }
+  }
+  .dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 80px;
+  }
+  .dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:#AFED56;
+    border-left: 2px solid #FC6D6D;
+    animation: typing 3s steps(15) infinite;
+  }
+
+
+
+
+  /*  hover card*/
+  .txt
+  {   font-size: 28px;
+      font-style: bold;
+      font-weight: 800;
+      text-align: center;
+  }
+  .kapha
+  { 
+      width:100%;
+      height:100%;
+      font-size: 18px;
+      background:linear-gradient(180deg,#1893CC 40%,#0B9326 60%);
+      color: black;
+      transition: all 0.3s;
+  }
+  .pitta
+  { width:100%;
+      height:100%;
+      font-size: 18px;
+     /* background:linear-gradient(360deg,#cb883b ,#DFD166 );*/
+     background-image: url("WhatsApp\ Image\ 2024-02-24\ at\ 16.29.55_485aaa52.jpg");
+      color: black;
+      transition: all 0.3s;
+  }
+  .vatta
+  { width:100%;
+      height:100%;
+      font-size: 18px;
+      margin-top:0;
+      /*background:linear-gradient(180deg,#66DFD8 ,#66AADF );*/
+      background-image: url("WhatsApp\ Image\ 2024-02-24\ at\ 16.29.55_485aaa52.jpg");
+      color: black;
+      transition: all 0.3s;
+  }
+  .dosa 
+{ display: flex;
+    
+  justify-content: space-between 10px;
+  /* height: fit-content;*/
+   max-width: 900px;
+   position:absolute;
+   bottom: 65px;
+   left:30%;
+   
+
+}
+.dosa1
+{ margin: 0;
+   cursor:pointer;
+   
+   display: flex;
+   background:linear-gradient(180deg,orange,rgb(249,70,100),rgb(244,43,244));
+   transition: all 0.3;
+
+
+}
+
+
+   
+  .dosa1:hover
+{
+    border-radius: 20px;
+    box-shadow: 0px 0px 100px rgb(3, 89, 3);
+}
+.dosa1:hover .kapha{
+    scale:0.95;
+    border-radius: 20px;
+}
+.dosa1:hover .vatta{
+    scale:0.95;
+    border-radius: 20px;
+}
+.dosa1:hover .pitta{
+    scale:0.95;
+    border-radius: 20px;
+}
+
+
+
+
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+  .content2{
+    width: 100px;
+    height: 30px;
+    
+    position: absolute;
+    bottom :40px;
+    left: 40px;
+    
+  }
+
+  .img1,.img2,.img3{
+    
+    width: 100%;
+    height: 100%;
+  }
+ 
+  .img1,img{
+    width: 80%;
+    height: 100%;
+  }
+  .img2,img{
+    width: 80%;
+    height: 100%;
+  }
+  .img3,img{
+    width: 80%;
+    height: 100%;
+  }
+
+/* card effect*/
+.dosa1
+{ 
+   cursor:pointer;
+   display: flex;
+   background:linear-gradient(180deg,orange,rgb(249,70,100),rgb(244,43,244));
+   transition: all 0.3;
+
+
+}
+.dosa1:hover
+{
+    border-radius: 20px;
+    box-shadow: 0px 0px 100px rgb(3, 89, 3);
+}
+.dosa1:hover .img3{
+    scale:0.95;
+    border-radius: 20px;
+}
+.dosa1:hover .img2{
+    scale:0.95;
+    border-radius: 20px;
+}
+.dosa1:hover .img1{
+    scale:0.95;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+  /*questionaires */
+
+
+.btn
+{
+    background: white;
+    color: aquamarine;
+    font-weight: 400;
+    width: max-content;
+    border:1px solid black;
+    padding :10px;
+    margin: 10px .0;
+    text-align: left;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: all 0.4s;
+
+}
+
+
+.btn:hover:not([disabled]){
+    background:skyblue;
+    color:#fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#chat-messages {
+  padding: 16px;
+  width: 500px;
+  
+  height: 300px;
+  
+  overflow-y: scroll;
+  
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  
+  
+  background-color: #ffffff44;
+  backdrop-filter: 10px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+}
+#start{
+  background-color: #4caf50;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+.next
+{
+  background-color: #4caf50;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  
+}
+
+#start:disabled{
+  cursor: no-drop;
+  display: block;
+}
+
+
+/*  barrr */
+
+
+
+
+
+
+.content
+{
+  background-color: #066f6d;
+  width:500px;
+  
+  height:40%;
+  position: absolute;
+  bottom:40px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ffffff44;
+  backdrop-filter: 10px;
+
+  
+}
+
+
+.progressk{
+  
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  background: #25a5be;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}.progressv{
+  
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  background: #76a705;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+.progressp{
+  
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  background: #f72b0c;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+
+.progress__fillk{
+  width: 50%;
+  height: 100%;
+  background: #044755;
+  transition: all 0.2s;
+}
+.progress__fillp{
+  width: 50%;
+  height: 100%;
+  background: #7f1505;
+  transition: all 0.2s;
+}
+.progress__fillv{
+  width: 50%;
+  height: 100%;
+  background: #3e540a;
+  transition: all 0.2s;
+}
+
+.progress__text {
+  position:absolute;
+  bottom:2px;
+  transform: translateY(-50%);
+  font: bold 14px "Quicksand", sans-serif;
+  color: #ffffff;
+}
+.bar{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+#txt
+{
+  font-size: 35px;
+  font-weight: 700px;
+  align-self: center;
+}
+
+.heading
+{
+  width:80%;
+  position:absolute;
+  top:20px;
+  left:20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+#head{
+  font-size: 90px;
+    font-weight: 400;
+  
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram Bar Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #chart {
+            display: flex;
+            width: 400px;
+            height: 300px;
+            border: 1px solid #cccccc;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar {
+            flex: 1;
+            background-color: #db3434;
+            transition: height 0.5s;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="bar1">Bar 1:</label>
+        <input type="number" id="bar1" placeholder="Enter data for Bar 1">
+        <br>
+        <label for="bar2">Bar 2:</label>
+        <input type="number" id="bar2" placeholder="Enter data for Bar 2">
+        <br>
+        <label for="bar3">Bar 3:</label>
+        <input type="number" id="bar3" placeholder="Enter data for Bar 3">
+        <br>
+        <button onclick="updateChart()">Update Chart</button>
+    </div>
+
+    <div id="chart">
+        <div class="bar"  id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+    </div>
+
+    <script>
+        function updateChart() {
+            const bar1Value = document.getElementById('bar1').value;
+            const bar2Value = document.getElementById('bar2').value;
+            const bar3Value = document.getElementById('bar3').value;
+
+            updateBarHeight('bar1', bar1Value);
+            updateBarHeight('bar2', bar2Value);
+            updateBarHeight('bar3', bar3Value);
+        }
+
+        function updateBarHeight(barId, value) {
+            const bar = document.getElementById(barId);
+            const height = `${value * 5}px`; // Scale the height for better visibility
+            bar.style.height = height;
+            bar.innerText = value;
+        }
+    </script>
+</body>
+</html>
